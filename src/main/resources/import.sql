@@ -1,0 +1,2 @@
+INSERT INTO tb_publico (cnpj, cpf, email, nome, respondido, sugestao) VALUES (' ', '40029743915', 'orestesaraujo@gmail.com', 'Orestes Gastao Santos Araujo', 'N', ' ');
+INSERT INTO tb_publico (cnpj, cpf, email, nome, respondido, sugestao) VALUES (' ', '45962138953', 'marilene_83@hotmail.com', 'Marilene Cechetto Araujo', 'N', ' ');
