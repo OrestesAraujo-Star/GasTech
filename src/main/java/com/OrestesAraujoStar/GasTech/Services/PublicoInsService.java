@@ -1,9 +1,12 @@
 package com.OrestesAraujoStar.GasTech.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.OrestesAraujoStar.GasTech.dto.PublicoDTO;
 import com.OrestesAraujoStar.GasTech.dto.PublicoInsInsertDTO;
 import com.OrestesAraujoStar.GasTech.entities.Publico;
 import com.OrestesAraujoStar.GasTech.repositories.PublicoRepository;
@@ -30,8 +33,12 @@ public class PublicoInsService {
 		
 	}
 	
+	@Transactional(readOnly = true)
+	public Page<PublicoDTO> findByMoments(PageRequest pageRequest) {
+		return repository.findByMoments(pageRequest).map(x -> new PublicoDTO(x));
+	}
 
-		
+
 		
 	
 
